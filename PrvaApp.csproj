@@ -127,13 +127,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="CreditsStrana.xaml.cs">
+	  <Compile Update="Mobile\CreditsStrana.xaml.cs">
 	    <DependentUpon>CreditsStrana.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="CreditsStrana.xaml">
+	  <MauiXaml Update="Mobile\CreditsStrana.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
