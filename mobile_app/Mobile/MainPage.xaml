@@ -32,10 +32,19 @@
                 x:Name="mestozasliku"
                 />
             <Label
-                x:Name="imes"
+                x:Name="imes1"
                 />
             <Label
-                x:Name="imet"
+                x:Name="imes2"
+                />
+            <Label
+                x:Name="imes3"
+                />
+            <Label
+                x:Name="imes4"
+                />
+            <Label
+                x:Name="imes5"
                 />
         </VerticalStackLayout>
     </ScrollView>

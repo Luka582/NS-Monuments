@@ -1,6 +1,7 @@
 ﻿
 using Microsoft.Maui.Media;
 using SQLite;
+using static Android.Telephony.CarrierConfigManager;
 namespace PrvaApp
 {
     public partial class MainPage : ContentPage
@@ -71,12 +72,12 @@ namespace PrvaApp
                 await stream.CopyToAsync(ms);
                 byte[] imageBytes = ms.ToArray();
 
-                var results = await App.Recognition.RecognizeAsync(imageBytes,1);
-                foreach(var r in results)
-                {
-                    imes.Text = r.MonumentName;
-                    imet.Text = r.Description;
-                }
+                var results = await App.Recognition.RecognizeAsync(imageBytes,5); 
+                imes1.Text = results[0].MonumentName + results[0].Score.ToString();
+                imes2.Text = results[1].MonumentName + results[1].Score.ToString();
+                imes3.Text = results[2].MonumentName + results[2].Score.ToString();
+                imes4.Text = results[3].MonumentName + results[3].Score.ToString();
+                imes5.Text = results[4].MonumentName + results[4].Score.ToString();
             }
         }
     }
