@@ -9,6 +9,9 @@
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="klik1"/>
+            </Grid.GestureRecognizers>
             <Border Grid.Column="0" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
                 <Image
             x:Name="prvaslika"
@@ -31,6 +34,9 @@
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="klik2"/>
+            </Grid.GestureRecognizers>
             <Border Grid.Column="0" BackgroundColor="Transparent" StrokeShape="RoundRectangle 10">
                 <Image
     x:Name="drugaslika"
@@ -53,6 +59,9 @@
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="klik3"/>
+            </Grid.GestureRecognizers>
             <Border Grid.Column="0" BackgroundColor="Transparent" StrokeShape="RoundRectangle 10">
                 <Image
     x:Name="trecaslika"
@@ -75,6 +84,9 @@
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="klik4"/>
+            </Grid.GestureRecognizers>
             <Border Grid.Column="0" BackgroundColor="Transparent" StrokeShape="RoundRectangle 10">
                 <Image
     x:Name="cetvrtaslika"
@@ -97,6 +109,9 @@
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="klik5"/>
+            </Grid.GestureRecognizers>
             <Border Grid.Column="0" BackgroundColor="Transparent" StrokeShape="RoundRectangle 10">
                 <Image
     x:Name="petaslika"

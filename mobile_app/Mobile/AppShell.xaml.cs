@@ -9,6 +9,7 @@ namespace PrvaApp
             InitializeComponent();
             Routing.RegisterRoute("credit", typeof(CreditsStrana));
             Routing.RegisterRoute("rezultat", typeof(Rezultat));
+            Routing.RegisterRoute("info", typeof(Info));
         }
     }
 }

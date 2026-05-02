@@ -7,10 +7,9 @@ namespace PrvaApp
         public Rezultat()
         {
             InitializeComponent();
-
+            
         }
-
-        private static readonly string BaseDir = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+        List<RecognitionResult> rez;
 
         public static string NadjiSliku(string s)
         {
@@ -31,7 +30,7 @@ namespace PrvaApp
             s = s.Replace('Š', 's');
             s = s.Replace('đ', 'd');
             s = s.Replace('Đ', 'd');
-            s = s.Replace('Ž', 'z');
+            s = s.Replace('Ž', 'Z');
             s = s.Replace('ž', 'z');
             return s;
         }
@@ -44,6 +43,7 @@ namespace PrvaApp
                 {
                     this.Title = "Rezultat";
                 }
+                rez = value;
                 prvaslika.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync(NadjiSliku(value[0].MonumentName)).Result);
                 prvitekst.Text = value[0].MonumentName;
                 drugaslika.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync(NadjiSliku(value[1].MonumentName)).Result);
@@ -55,6 +55,46 @@ namespace PrvaApp
                 petaslika.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync(NadjiSliku(value[4].MonumentName)).Result);
                 petitekst.Text = value[4].MonumentName;
             }
+        }
+        private async void klik1(Object sender , EventArgs e)
+        {
+            var navigationParameter = new Dictionary<string, object>
+                {
+                    { "info", rez[0] }
+                };
+            await Shell.Current.GoToAsync("info", navigationParameter);
+        }
+        private async void klik2(Object sender, EventArgs e)
+        {
+            var navigationParameter = new Dictionary<string, object>
+                {
+                    { "info", rez[1] }
+                };
+            await Shell.Current.GoToAsync("info", navigationParameter);
+        }
+        private async void klik3(Object sender, EventArgs e)
+        {
+            var navigationParameter = new Dictionary<string, object>
+                {
+                    { "info", rez[2] }
+                };
+            await Shell.Current.GoToAsync("info", navigationParameter);
+        }
+        private async void klik4(Object sender, EventArgs e)
+        {
+            var navigationParameter = new Dictionary<string, object>
+                {
+                    { "info", rez[3] }
+                };
+            await Shell.Current.GoToAsync("info", navigationParameter);
+        }
+        private async void klik5(Object sender, EventArgs e)
+        {
+            var navigationParameter = new Dictionary<string, object>
+                {
+                    { "info", rez[4] }
+                };
+            await Shell.Current.GoToAsync("info", navigationParameter);
         }
     }
 }

@@ -6,6 +6,7 @@
     xmlns:local="clr-namespace:PrvaApp"
     Title="NS Monuments"
     Shell.TitleColor="CornflowerBlue"
-    Shell.ForegroundColor="CornflowerBlue">
+    Shell.ForegroundColor="CornflowerBlue"
+    Shell.DisabledColor="CornflowerBlue">
     <ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="glavna" />
 </Shell>
